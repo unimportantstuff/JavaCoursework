@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox fx:controller="coursework.Controller" xmlns:fx="http://javafx.com/fxml" styleClass="root" >
+    <HBox spacing="10">
+        <Text text="Welcome to the ALSET business trip cost calculator" />
+    </HBox>
+
+    <GridPane alignment="center"  hgap="10" vgap="10" styleClass="g-pane">
+        <Label text="Distance: "
+               GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+        <TextField fx:id="distance"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Fuel Efficiency:"
+               GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+        <TextField fx:id="fuelEfficiency"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Fuel Type:"
+               GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+        <ChoiceBox fx:id="fuelType" value="98 Octane" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="98 Octane" />
+                    <String fx:value="Diesel" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Text GridPane.columnIndex="1" GridPane.rowIndex="4">
+            Octane: 1.03, Diesel: 1.05
+        </Text>
+    </GridPane>
+    <HBox spacing="10">
+        <Button text="Calculate" onAction="#handleSubmitButtonAction"/>
+        <Button text="Get Previous Calculations" onAction="#getPreviousCalculations"/>
+    </HBox>
+    <HBox>
+        <Text fx:id="result" styleClass="result"/>
+    </HBox>
+    <stylesheets>
+        <URL value="@./style.css" />
+    </stylesheets>
+</VBox>

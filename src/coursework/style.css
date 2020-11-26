@@ -1,0 +1,30 @@
+.root,
+.g-pane {
+    -fx-background-color: #ffffff;
+}
+
+HBox, VBox {
+    -fx-alignment: center;
+    -fx-padding: 25;
+}
+
+Label, Text {
+    -fx-text-fill: #020002;
+}
+
+Button {
+    -fx-padding: 10 20;
+    -fx-background-color: #3fabfb;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+ChoiceBox {
+    -fx-background-color: #3fabfb;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 0 35;
+}
+
+.result {
+    -fx-padding: 0;
+}
